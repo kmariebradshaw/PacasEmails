@@ -37,50 +37,35 @@
         </section>
         <div style="border-bottom: 2px solid #fcf9fd; width: 90%; margin: 0 auto;display: block;"> </div>
       </div>
-<div style="width: 90%; margin: 0 auto 20px auto;">{% if requires_shipping and shipping_address %}
-<div style="display: inline-block; font-family: 'Helvetica'; margin: 10px 10px 10px 0px; font-size: 12px;color: #7b8284;">
-<div style="font-family: 'Helvetica' !important; font-weight: bolder;color: #7b8284;">Shipping address</div>
-{{ shipping_address.name }}<br />
-{{ shipping_address.street }}<br />
-{{ shipping_address.city }}, {{ shipping_address.province }} {{ shipping_address.zip }}<br />
-{{ shipping_address.country }}
-</div>
-{% endif %} 
-{% if billing_address %}
-<div style="display: inline-block; font-family: 'Helvetica'; margin: margin: 10px 10px 10px 0px; font-size: 12px;color: #7b8284;">
-<div style="font-family: 'Helvetica' !important; font-weight: bolder;color:#7b8284 ">Billing address</div>
-{{ billing_address.name }}<br />
-{{ billing_address.street }}<br />
-{{ billing_address.city }}, {{ billing_address.province }} {{ billing_address.zip }}<br />
-{{ billing_address.country }}
-</div>
-{% endif %}
-</div>
-</div>
-<h5 style="font-size: 11.5px; margin: auto; padding-top: 12px; font-family: 'Helvetica';text-align:center;color: #7b8284;">If you have any questions about your order<br> please contact us at support@pacas.us <br> or simply reply to this email!</h5>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-
-   <div style="text-align: center; width: 100%;">
-      <a href="https://www.instagram.com/pacas.apparel/" target="_blank" style="text-decoration: none;">
-        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/284b8f22-3edb-481e-a61c-5858717c8dd2.png" alt="Instagram" style="max-width: 35px; margin: 20px 5px;">
-      </a>
-      <a href="https://www.facebook.com/pacas.apparel/" target="_blank" style="text-decoration: none;">
-        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/3376a439-9bfe-4489-a378-583eb99ccab4.png" alt="facebook" style="max-width: 35px; margin: 20px 5px;">
-      </a>
+      <div style="width: 90%; margin: 0 auto 20px auto;">{% if requires_shipping and shipping_address %}
+        <div style="display: inline-block; font-family: 'Helvetica'; margin: 10px 10px 10px 0px; font-size: 12px;color: #7b8284;">
+          <div style="font-family: 'Helvetica' !important; font-weight: bolder;color: #7b8284;">Shipping address</div>
+          {{ shipping_address.name }}<br />
+          {{ shipping_address.street }}<br />
+          {{ shipping_address.city }}, {{ shipping_address.province }} {{ shipping_address.zip }}<br />
+          {{ shipping_address.country }}
+        </div>
+      {% endif %} 
+      {% if billing_address %}
+        <div style="display: inline-block; font-family: 'Helvetica'; margin: margin: 10px 10px 10px 0px; font-size: 12px;color: #7b8284;">
+          <div style="font-family: 'Helvetica' !important; font-weight: bolder;color:#7b8284 ">Billing address</div>
+          {{ billing_address.name }}<br />
+          {{ billing_address.street }}<br />
+          {{ billing_address.city }}, {{ billing_address.province }} {{ billing_address.zip }}<br />
+          {{ billing_address.country }}
+        </div>
+      {% endif %}
     </div>
+  </div>
+  <h5 style="font-size: 11.5px; margin: auto; padding-top: 12px; font-family: 'Helvetica';text-align:center;color: #7b8284;">If you have any questions about your order<br> please contact us at support@pacas.us <br> or simply reply to this email!</h5>
+  <div style="text-align: center; width: 100%;">
+    <a href="https://www.instagram.com/pacas.apparel/" target="_blank" style="text-decoration: none;">
+      <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/284b8f22-3edb-481e-a61c-5858717c8dd2.png" alt="Instagram" style="max-width: 35px; margin: 20px 5px;">
+    </a>
+    <a href="https://www.facebook.com/pacas.apparel/" target="_blank" style="text-decoration: none;">
+      <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/3376a439-9bfe-4489-a378-583eb99ccab4.png" alt="facebook" style="max-width: 35px; margin: 20px 5px;">
+    </a>
+  </div>
 </div>
 
 
