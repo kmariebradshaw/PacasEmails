@@ -1,0 +1,61 @@
+{% capture email_title %} Your shopping cart is waiting for you {% endcapture %}
+{% capture email_body %}
+{% if billing_address.first_name %}Hi {{ billing_address.first_name }}, w{% else %}
+W{% endif %}e noticed there {% if item_count == 1 %}was an item{% else %}were some items{% endif %} left in your shopping cart.
+If you're ready to complete your order, your cart is waiting for your return.
+{% endcapture %}
+
+<div style="width: 100%; max-width: 600px; padding: 20px 0; box-sizing: border-box; background-color:#f5fcfc;">
+   <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/1a02b1af-ef01-4c83-a2a7-be51ef4f28c2.png" alt="Pacas" style="max-width: 150px; margin: 20px auto; display: block;">
+    <div style="display: flex; align-items: center;text-align: center;">
+      <a href="https://www.pacas.us/collections/womens" style="font-family:'Helvetica Neue';width: 33%; text-align: center; color:#7b8284; text-decoration: none;margin: 0 5px;">Women</a>
+      <a href="https://www.pacas.us/collections/mens" style="font-family:'Helvetica Neue';width: 33%; text-align: center; color:#7b8284; text-decoration:none; margin: 0 5px">Men</a>
+      <a href="https://www.pacas.us/collections/kids" style="font-family:'Helvetica Neue';width: 33%; text-align: center; color:#7b8284; text-decoration:none;margin: 0 5px;">Kids</a>
+    </div>
+    <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/c0293d2b-2d08-4c6e-bc39-aa894a1c2db9.png" alt="Your shipping status has been updated" style="width: 100%;">
+
+<div class="container" style="text-transform:lowercase;border: 1px solid #545359; margin: auto; z-index: 999; position: relative;">
+<div style="text-transform:lowercase;width: 90%; text-align: center; margin: auto;">
+{% if custom_message != blank %}
+  <p>{{ custom_message }}</p>
+{% else %}
+  <p>{{ email_body }}</p>
+{% endif %}
+<h1 style='color:#222;display:block;font-family:"Helvetica Neue", Arial;font-size:40px;font-style:normal;font-weight:normal;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:20px;text-align:left;text-transform:lowercase;font-family:&squot;Helvetica&squot;;font-weight:bolder; font-size: 20px;margin: 15px 0; text-align: center; color:#545359;'>here's what you left</h1>
+</div>
+<div style="text-transform:lowercase;font-size: 14px;">
+<div style="text-transform:lowercase;border-bottom: 2px solid #6DCDB8; width: 90%; margin: 0 auto;display: block;"> </div>
+<section style="text-transform:lowercase;font-family: 'Helvetica';margin-top:20px;">
+<table cellspacing="10" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;text-transform:lowercase;width: 80%; margin: auto;">
+<tbody>
+<tr style="text-transform:lowercase;text-align: left;">
+<th style="text-transform:lowercase;font-weight:lighter;width: 70%;color: #545359;">Item</th>
+<th style="text-transform:lowercase;font-weight:normal;color: #545359;">QTY</th>
+</tr>
+    {% for line in line_items %}
+    <tr>
+<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;text-transform:lowercase;font-family: 'Helvetica' !important; font-weight: bolder;color:#545359;">{{ line.title }}</td>
+<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;text-transform:lowercase; font-weight: bolder;color: #545359;">{{ line.quantity }}</td>
+</tr>
+    {% endfor %}
+  </tbody>
+</table>
+</section>
+ 
+
+<div style="border-top: 2px solid #6DCDB8; width: 90%; margin: 0 auto; display:block;"> </div>
+</div>
+<a href="{{ url }}" style="font-size: 18px; font-weight:bolder; padding: 15px; border: 2px solid #545359; display: block; margin: 50px auto; width: 250px;text-align: center; text-decoration: none;color:#545359; ">Complete your purchase</a>
+</div>
+  <h5 style="font-size: 11.5px; margin: auto; padding-top: 12px; font-family: 'Helvetica';text-align:center;color: #7b8284;">If you have any questions about your order<br> please contact us at support@pacas.us <br> or simply reply to this email!</h5>
+  <div style="text-align: center; width: 100%;">
+    <a href="https://www.instagram.com/pacas.apparel/" target="_blank" style="text-decoration: none;">
+      <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/284b8f22-3edb-481e-a61c-5858717c8dd2.png" alt="Instagram" style="max-width: 35px; margin: 20px 5px;">
+    </a>
+    <a href="https://www.facebook.com/pacas.apparel/" target="_blank" style="text-decoration: none;">
+      <img src="https://d3k81ch9hvuctc.cloudfront.net/company/ueKycW/images/3376a439-9bfe-4489-a378-583eb99ccab4.png" alt="facebook" style="max-width: 35px; margin: 20px 5px;">
+    </a>
+  </div>
+</div>
+
+
